@@ -1,0 +1,200 @@
+:root {
+    --blanc : #ffffff;
+    --noir : rgba(0, 0, 0, 0.3);
+    --gris : rgba(233, 233, 233, 0.5);
+    --bleu : #0E143C;
+    --bleu_clair : #179de9;
+    --bleu_foncé : #00507c;
+    --rose_clair : #F1C6D7;
+    --rouge : rgba(255, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size : 16px;
+    margin : 0;
+    /* Couleur de fond avec un dégrader de 2 couleurs */
+    background: transparent linear-gradient(130deg, var(--bleu) 0%, var(--rose_clair) 100%); /* rotation; couleur de départ, couleur de fin */
+}
+
+/* Gain de temps : 
+on repète 3 fois "width : 80%" et "margin : auto" (dans le header , le main et le footer), 
+pour aller plus vite, on peut créer une "class="container" (ou un autre nom), et l'appliquer
+sur le header , le main et le footer. #HTML
+On fera ensuite ".container { width="80%" margin="auto" } et ça appliquera donc les modif sur
+le header, le main et le footer. #CSS */
+
+
+/* Entête de la page */
+/*Général*/
+header {
+    display: flex ;
+    width: 80%;
+    margin : auto;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gris);
+    padding: 5px 0;
+}
+
+/* Image */
+header nav a img {
+    width: 140px;
+    height: 60px;
+}
+
+/* Nav */
+.NavG,
+.NavG ul,
+.NavD ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap : 50px
+}
+
+.NavD {
+    margin-top: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+
+/* Bordure Sign in */
+.Signin {
+    border: 1px solid var(--blanc);
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+
+
+
+
+/* Corps de la page */
+/*Général*/
+main {
+    width: 80%;
+    margin : auto;
+    display: flex;
+    justify-content: space-between;
+    color : var(--blanc);
+}
+
+/*Positionnement Message*/
+main .Message {
+    text-align: left;
+    width : 30%;
+    margin: 20% 0 ;
+}
+
+/*Titre*/
+main .Message h1 {
+    margin: 0;
+    font-size : 3.5rem ;
+
+}
+
+/*paragraphe*/
+main .Message p {
+    margin: 20px 0 50px 0;
+    font-size: 1.6rem;
+}
+
+/*Liens*/
+main .Message a {
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px 10px;
+    color: var(--blanc);    
+}
+
+.bouton1 {
+    background : transparent linear-gradient(180deg, var(--bleu_clair) 0%, var(--bleu) 100%);
+    padding: 10px 30px;
+    text-shadow: 1px 1px 0 var(--noir); 
+    box-shadow: 0 3px 4px var(--noir);
+}
+
+.bouton2 {
+    border: 1px solid var(--blanc);
+    padding: 9px 35px;
+}
+
+/*Positionnement photo*/
+.photos {
+    margin: 8% 10% 8% 0;
+    height: 600px;
+    width: 590px;
+    position: relative;
+}
+
+.telD {
+    position: absolute;
+    top: 15%;
+    right : 0;
+}
+
+.telC {
+    position: absolute;
+    top: 0;
+    left : 26%;
+}
+
+.telG {
+    position: absolute;
+    top: 15%;
+    left : 0;
+}
+
+/*Ombrage photo*/
+.telD,
+.telG {
+    filter: drop-shadow(40px 40px 40px var(--rouge)); /*Autre possibilité de mettre une ombre */
+}
+/* https://developer.mozilla.org/fr/docs/Web/CSS/filter -> toutes les possibilitées de filter */
+
+.telC {
+    filter: drop-shadow(40px 40px 40px var(--noir));
+}
+
+/*
+"Display :none" enleve un élément
+"Visibility : hidden" element plus visible
+*/
+
+
+
+/* Pied de page */
+/*Général*/
+footer {
+    display: flex ;
+    width: 80%;
+    margin : auto;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gris);
+    padding: 2px 0;
+}
+
+/*Nav*/
+footer nav ul {
+    display: flex;
+    list-style: none;
+    gap : 50px;
+}
+
+
+footer nav ul li a {
+    text-decoration: none;
+    color: var(--blanc);
+}
+
+/*Image*/
+footer img {
+    padding-top: 5px;
+    width: 90px;
+    opacity : 0.5; /* 0.5 pour 50%*/
+}
